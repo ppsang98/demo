@@ -1,14 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Suspense } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import Loading from "./components/Loading/Loading";
+import reportWebVitals from "./reportWebVitals";
+import "./i18n";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Suspense fallback={<Loading />}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Suspense>,
+
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

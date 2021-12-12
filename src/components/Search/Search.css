@@ -1,0 +1,33 @@
+.search_wrapper {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.search_wrapper_input {
+  position: relative;
+  z-index: 1;
+  border: thin solid #ccc;
+  border-right: none;
+  width: 100%;
+  font-size: 18px;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.search_wrapper_button {
+  border: thin solid #ccc;
+  border-radius: 0 5px 5px 0;
+  height: 33px;
+  padding: 0 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.search_wrapper {
+  font-size: 24px;
+  color: #202;
+}

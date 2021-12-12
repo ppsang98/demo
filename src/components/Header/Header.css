@@ -1,0 +1,71 @@
+.Header {
+  background-color: #358e3f;
+  padding: 0.5rem 1.5rem;
+}
+
+.Header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header__body--left,
+.Header__body--right {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Header__body--left {
+}
+
+.notification {
+  position: relative;
+  color: white;
+  
+}
+
+.notification > i {
+  font-size: 25px;
+  position: relative;
+}
+
+.notification__number {
+  position: absolute;
+  top: -5px;
+  left: 70%;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.Time-counter {
+  margin-left: 20px;
+}
+
+.Time-counter > p{
+  margin: 0.5rem 0;
+}
+
+.Header-link {
+  text-decoration: none;
+  color: white;
+  margin-left: 0.75rem;
+}
+
+@media only screen and (max-width: 520px) {
+  .Time-counter {
+    font-size: 12px;
+  }
+  .Header__body {
+    flex-direction: column; 
+  }
+  .Header__body--left {
+    margin-bottom: 0.55rem;
+  }
+}

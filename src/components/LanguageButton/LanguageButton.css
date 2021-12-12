@@ -1,0 +1,25 @@
+.language {
+  margin-left: 0.75rem;
+}
+
+.flag {
+  background-size: 150% 100%;
+  outline: 2px solid white;
+  background-position: center;
+}
+
+.en {
+  background-image: url('https://www.worldometers.info/img/flags/uk-flag.gif');
+}
+
+.cn {
+  background-image: url('https://www.worldometers.info/img/flags/ch-flag.gif');
+}
+
+.vi {
+  background-image: url('https://www.worldometers.info/img/flags/vm-flag.gif');
+}
+
+.th {
+  background-image: url('https://www.worldometers.info/img/flags/th-flag.gif');
+}

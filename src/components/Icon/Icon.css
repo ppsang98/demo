@@ -1,0 +1,83 @@
+.icon_wrapper {
+  background: #eee;
+  width: calc(25% - 6px);
+  margin: 3px;
+  text-align: center;
+  padding: 5px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+body[data-theme="dark"] .icon_wrapper, .search_wrapper_button {
+  color: rgb(250, 250, 250);
+  background-color: rgb(80, 80, 80);
+}
+
+.icon_wrapper::before {
+  content: "Click to copy";
+  clear: both;
+  display: block;
+  top: 0;
+  right: 0;
+  font-size: 11px;
+  position: absolute;
+  background: #202020;
+  color: #fff;
+  padding: 0 5px;
+  letter-spacing: .098em;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.icon_wrapper:hover::before {
+  -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.icon {
+  height: 65px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.icon span {
+  font-size: 32px;
+}
+
+.icon_wrapper pre {
+  font-family: monospace;
+    background: #000;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 11px;
+    cursor: copy;
+}
+
+@media only screen and (max-width: 1024px) {
+  .icon_wrapper {
+    width: 32%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .icon_wrapper {
+    width: 48%;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .icon_wrapper {
+    width: 100%;
+  }
+}

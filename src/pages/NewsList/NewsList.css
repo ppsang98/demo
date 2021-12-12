@@ -1,0 +1,7 @@
+.news__list {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-around;
+}
