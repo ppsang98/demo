@@ -9,18 +9,20 @@ import {
   Navigate,
 } from "react-router-dom";
 import Welcome from "./components/Welcome/Welcome";
-import Home from './pages/Home/Home';
-import NewsList from './pages/NewsList/NewsList';
-import DetailNews from './pages/DetailNews/DetailNews';
+import Home from "./pages/Home/Home";
+import NewsList from "./pages/NewsList/NewsList";
+import DetailNews from "./pages/DetailNews/DetailNews";
 import { TranslateContextProvider, UserContext } from "./CommonContext";
 import "./i18n";
 
 function App() {
   const { t, i18n } = useTranslation();
-  
+
   const [language, setLanguage] = useState(localStorage.getItem("i18nextLng"));
-  
-  const [username, setUsername] = useState(localStorage.getItem("username"))
+
+  const [username, setUsername] = useState(
+    localStorage.getItem("username") || ""
+  );
 
   const changeLanguage = (lang) => {
     setLanguage(lang);
@@ -29,22 +31,22 @@ function App() {
   useEffect(() => {
     i18n.changeLanguage(language);
   }, [language]);
-  
+
   const gotoLogin = (username) => {
     localStorage.setItem("username", username);
     setUsername(username);
-  }
-  
+  };
+
   const gotoLogout = () => {
     localStorage.removeItem("username");
-    setUsername('');
-  }
-  
+    setUsername("");
+  };
+
   const userContextValue = {
     username,
     gotoLogin,
-    gotoLogout
-  }
+    gotoLogout,
+  };
 
   return (
     <TranslateContextProvider value={t}>
@@ -55,10 +57,7 @@ function App() {
             <Welcome />
             <div className="container">
               <Routes>
-                <Route
-                  path="/"
-                  element={<Navigate to={`/${language}`} />}
-                />
+                <Route path="/" element={<Navigate to={`/${language}`} />} />
                 <Route path="/">
                   <Route path=":lang">
                     <Route path="" element={<Home />} />

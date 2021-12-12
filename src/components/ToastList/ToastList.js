@@ -7,15 +7,18 @@ const ToastList = (props) => {
   return (
     <div className="toast">
       {toastList.length > 0 &&
-        toastList.map((toast, i) => (
-          currentToast.current[i] && <Toast
-            classIcon={toast}
-            key={i}
-            index={i}
-            clearToast={clearToast}
-            isShow = {currentToast.current[i]}
-          />
-        ))}
+        toastList.map(
+          (toast, i) =>
+            currentToast.current[i] && (
+              <Toast
+                classIcon={toast}
+                key={i}
+                index={i}
+                clearToast={clearToast}
+                isShow={currentToast.current[i]}
+              />
+            )
+        )}
     </div>
   );
 };

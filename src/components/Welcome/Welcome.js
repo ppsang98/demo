@@ -6,7 +6,10 @@ const Welcome = () => {
 
   return (
     <div>
-      <h1>{t("welcome")}{userContext.username !== "" && ", " + userContext.username}</h1>
+      <h1>
+        {t("welcome")}
+        {userContext.username !== "" && ", " + userContext.username}
+      </h1>
     </div>
   );
 };
